@@ -1,74 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Todo : Todo is a simple yet powerful Alfred workflow, made for todo list management." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Todo by BenziAhamed</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Todo</title>
   </head>
-
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/BenziAhamed/todo">View on GitHub</a>
+      <header>
+        <h1>Todo</h1>
+        <p>Todo is a simple yet powerful Alfred workflow, made for todo list management.</p>
+      </header>
 
-          <h1 id="project_title">Todo</h1>
-          <h2 id="project_tagline">Todo is a simple yet powerful Alfred workflow, made for todo list management.</h2>
+      <div id="banner">
+        <span id="logo"></span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/BenziAhamed/todo/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/BenziAhamed/todo/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <a href="https://github.com/BenziAhamed/todo" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/BenziAhamed/todo/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/BenziAhamed/todo/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>Todo</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/intro.png" alt="Todo intro" title="About Todo"></p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h2>Overview</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Todo is a simple yet feature packed todo list manager for Alfred.</p>
 
-<h3>Designer Templates</h3>
+<p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/todo_items.png" alt="Todo items" title="Todo items"></p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>Getting started</h2>
 
-<h3>Rather Drive Stick?</h3>
+<h3>Keywords</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<ul>
+<li>
+<code>todo</code> this is the main keyword, and lets you get started
 
-<h3>Authors and Contributors</h3>
+<ul>
+<li>
+<code>todo &lt;new task&gt;</code> will add a new task</li>
+<li>
+<code>todo</code> will display the list of tasks</li>
+<li>
+<code>todo #</code> will display the list of tags</li>
+</ul>
+</li>
+<li>
+<code>add &lt;new task&gt;</code> will add a new task</li>
+<li>
+<code>done</code> will show you all items that have been marked as done</li>
+<li>
+<code>clear</code> to remove items</li>
+</ul><h4>Adding new items</h4>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<ul>
+<li>Typing <code>add a new task</code> will create a new task titled <strong>a new task</strong>. This will be tagged <strong>#default</strong>
+</li>
+<li>Typing <code>todo #work sign off document</code> will create a task titled <strong>sign off document</strong> and tagged <strong>#work</strong>
+</li>
+<li>Typing <code>add !! this is sticky</code> will create a pinned item titled <strong>this is sticky</strong>, tagged <strong>#default</strong>
+</li>
+</ul><p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/todo_new.png" alt="Todo add item" title="Add item"></p>
 
-<h3>Support or Contact</h3>
+<p>When adding items, add and todo keywords are interchangeable, although the key difference is add allows you to add items with the title twice; todo provides a more informative feedback on screen</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h4>Command modifiers</h4>
+
+<ul>
+<li>Pressing <code>fn</code> key when selecting an item will enable edit mode for that item - this works for both todo items and tags
+
+<ul>
+<li>In edit mode, use the same syntax that you use to create a new todo - e.g. <code>#newtag new todo text</code>. Todo will identify which portion you need to change and update them accordingly</li>
+</ul>
+</li>
+<li>
+<code>Shift</code> will allow you to mark an item as done. You can view all done items with the done keyword</li>
+<li>
+<code>Cmd</code> will help you delete either a todo item, and all items that match a specific tag</li>
+<li>
+<code>Alt</code> will help you list out all items that match the currently selected items tag</li>
+<li>
+<code>Ctrl</code> will help you pin/unpin a todo item. Pinned items will always be displayed first (they can be deleted as usual)</li>
+<li>
+<code>Tab</code> key against a todo item, you will be shown all todo items with the matching tag</li>
+<li>
+<code>Enter</code> will copy the text content of a todo item to the clipboard</li>
+</ul><h3>Advanced Keywords</h3>
+
+<p>Todo is made to work out of the box by default, but in case you need more control the following commands may help:</p>
+
+<ul>
+<li>
+<code>setup {then select a folder in Alfred}</code>. If you want to change the location of your todo items database file, use this option. Useful if you need it to set it up as a folder within Dropbox to sync your todo items between multiple computers having Todo. 
+
+<ul>
+<li>Once you define a setup folder, all your existing todo database file will be moved over to the new location, and you can resume working with Todo. You can use the setup command multiple times.
+The todo database file is a simple text based format, you can open it and view it in your favourite text editor. (The format is YAML)</li>
+</ul>
+</li>
+<li>
+<code>reset</code> As the name suggests, resets your Todo workflow (clears all todo items, resets the location of your todo database file to the default location)</li>
+<li>
+<code>export</code> Will allow you to export your todo list as plain text. If you have specific tags created, you can export them individually. At the moment, the export only copies items to the clipboard</li>
+<li>
+<code>import (file mode)</code> Use this option and specify a text file to import contents from that. Format of the text file can be 1 todo item per line, or the format the export option uses. Import mechanism ignores whitespaces, so you can indent your files as you please. Here is an example.</li>
+<li>
+<code>import (from clipboard)</code> This option will allow you to import the contents of your clipboard, rather than from a file</li>
+<li>
+<code>features</code> keyword will allow you to switch on various features.</li>
+</ul><h4>Features</h4>
+
+<p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/features.png" alt="Features" title="Features"></p>
+
+<p>Currently, there are three settings. <strong>Quick Create</strong> allows you to create new Todo items (when typing it in using the todo keyword) slightly faster. It prevents Alfred from disappearing and appearing when an item is added.</p>
+
+<p><strong>Smart Content</strong> - if you would like to add folders, URLs, to Todo, try adding them after Smart Content mode is switched on. It allows the following transformation</p>
+
+<p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/no_smartcontent.png" alt="Smart Content Disabled" title="Smart Content Disabled"></p>
+
+<p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/smartcontent.png" alt="Smart Content Enabled" title="Smart Content Enabled"></p>
+
+<p><strong>Smart Content - Page Titles</strong>, when enabled, will pre-fetch the web page title so that you get a better idea what a link will take you to, as in the example above.</p>
+
+<p>This allows you to do multiple things, you can now group your favourite links, folders or files by a tag name. Smart Content works best when you have a hot key enabled to add a new Todo item.</p>
+
+<p>Remember, smart content items are just simple todo items, so you can pin, tag, delete, mark as done etc as normal. Smart content only kicks in for all new items added, so existing items will remain untouched.</p>
+
+<h2>Syntax Guide</h2>
+
+<p>To create or edit todo items, you use the Todo item syntax. A todo item can be simply represented just the task description, or marked up with tags, pin status and a due date. </p>
+
+<p>A full fedged task description would be like:</p>
+
+<blockquote>
+<p><code>!!</code> <code>#tag</code> <code>this is a task</code> <code>@mon</code></p>
+</blockquote>
+
+<ul>
+<li>The <code>!!</code> is a shortcut that identifies the todo item should be pinned by deafault.</li>
+<li>
+<code>#tag</code> specifies that the todo item should be tagged with the name <code>tag</code>.</li>
+<li>
+<code>this is a task</code> is the text of the todo item</li>
+<li>
+<code>@mon</code> is the due date specifier</li>
+</ul><p>Every section other than the task description is optional</p>
+
+<h3>Due dates</h3>
+
+<p>The following are supported</p>
+
+<ul>
+<li>
+<code>@today</code> item is due today</li>
+<li>
+<code>@tomorrow</code> item is due tomorrow</li>
+<li>
+<code>@weekend</code> item is due next Sunday</li>
+<li>
+<code>@nextweek</code> item is due next Monday</li>
+<li>
+<code>@mon</code>,<code>@tue</code>,…,<code>@sun</code> item is due next specified week day</li>
+<li>
+<code>@xd</code> item is due <code>x</code> days from today - <code>@6d</code> means item is due 6 days from now</li>
+<li>
+<code>@xw</code> item is due <code>x</code> weeks from today</li>
+<li>
+<code>@xm</code> item is due <code>x</code> months from today</li>
+<li>
+<code>@fuzzy date</code> item is due on the date specified. <code>@1 Dec 2013</code>, <code>@Jan 2 2013</code>, <code>@1-13-2013</code> et cetera are recognized</li>
+</ul><h4>Clearing due dates</h4>
+
+<p>In item edit mode, enter <code>@!</code> to clear a set due date.</p>
+
+<h2>Credits</h2>
+
+<p>Lots of people have contributed with suggestions and feature ideas. In particular, the following folks from the Alfred Forum:</p>
+
+<ul>
+<li><a href="http://www.alfredforum.com/user/58-twinpeaks/">twinpeaks</a></li>
+<li><a href="http://www.alfredforum.com/user/104-carlosnz/">CarlosNZ</a></li>
+<li><a href="http://www.alfredforum.com/user/2262-xtin/">xtin</a></li>
+</ul>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Todo maintained by <a href="https://github.com/BenziAhamed">BenziAhamed</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/BenziAhamed">BenziAhamed</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
