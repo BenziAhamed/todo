@@ -6,10 +6,9 @@
 
 Todo is a simple yet feature packed todo list manager for Alfred.
 
+![Todo items][6]
+
 ## Getting started
-
-
-
 ### Keywords
 
 * `todo` this is the main keyword, and lets you get started
@@ -122,3 +121,4 @@ Lots of people have contributed with suggestions and feature ideas. In particula
 [3]: https://dl.dropbox.com/u/2377432/alfredv2/todo/features.png "Features"
 [4]: https://dl.dropbox.com/u/2377432/alfredv2/todo/no_smartcontent.png "Smart Content Disabled"
 [5]: https://dl.dropbox.com/u/2377432/alfredv2/todo/smartcontent.png "Smart Content Enabled"
+[6]: https://dl.dropbox.com/u/2377432/alfredv2/todo/todo_items.png "Todo items"
