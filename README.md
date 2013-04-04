@@ -15,6 +15,8 @@ Todo is a simple yet feature packed todo list manager for Alfred.
     * `todo <new task>` will add a new task
     * `todo` will display the list of tasks
     * `todo #` will display the list of tags
+    * `todo @` will display all items with a due date
+    > **TIP** To see all items due for today, type `todo @today`
 * `add <new task>` will add a new task
 * `done` will show you all items that have been marked as done
 * `clear` to remove items
@@ -25,6 +27,7 @@ Todo is a simple yet feature packed todo list manager for Alfred.
 * Typing `add a new task` will create a new task titled **a new task**. This will be tagged **#default**
 * Typing `todo #work sign off document` will create a task titled **sign off document** and tagged **#work**
 * Typing `add !! this is sticky` will create a pinned item titled **this is sticky**, tagged **#default**
+* Typing `todo @today a new task for the day` will create a new item, due for today, titled **a new task for the day**
 
 ![Todo add item][2]
 
@@ -87,7 +90,7 @@ A full fedged task description would be like:
 * `this is a task` is the text of the todo item
 * `@mon` is the due date specifier
 
-Every section other than the task description is optional
+Every section other than the task description is optional. All sections can appear anywhere.
 
 
 ### Due dates
