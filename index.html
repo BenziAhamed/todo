@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Todo by BenziAhamed</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Todo : Todo is a simple yet powerful Alfred workflow, made for todo list management." />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Todo</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Todo</h1>
-        <p>Todo is a simple yet powerful Alfred workflow, made for todo list management.</p>
 
-        <p class="view"><a href="https://github.com/BenziAhamed/todo">View the Project on GitHub <small>BenziAhamed/todo</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/BenziAhamed/todo">View on GitHub</a>
 
+          <h1 id="project_title">Todo</h1>
+          <h2 id="project_tagline">Todo is a simple yet powerful Alfred workflow, made for todo list management.</h2>
 
-        <ul>
-          <li><a href="https://dl.dropbox.com/u/2377432/alfredv2/todo/Todo.alfredworkflow">Download <strong>Workflow</strong></a></li>
-          <li><a href="https://dl.dropbox.com/u/2377432/alfredv2/todo/Todo%20Theme.alfredappearance">Download <strong>Theme</strong></a></li>
-          <li><a href="https://github.com/BenziAhamed/todo">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/BenziAhamed/todo/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/BenziAhamed/todo/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>Todo</h1>
 
 <p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/intro.png" alt="Todo intro" title="About Todo"></p>
@@ -117,18 +120,26 @@ The todo database file is a simple text based format, you can open it and view i
 <li>
 <code>reset</code> As the name suggests, resets your Todo workflow (clears all todo items, resets the location of your todo database file to the default location)</li>
 <li>
-<code>export</code> Will allow you to export your todo list as plain text. If you have specific tags created, you can export them individually. At the moment, the export only copies items to the clipboard</li>
+<code>export</code> Will allow you to export your todo list as plain text. Two options are available:
+
+<ul>
+<li>Export todo list to a .taskpaper file</li>
+<li>Export todo list in classic plain text/taskpaper format to clipboard </li>
+</ul>
+</li>
 <li>
-<code>import (file mode)</code> Use this option and specify a text file to import contents from that. Format of the text file can be 1 todo item per line, or the format the export option uses. Import mechanism ignores whitespaces, so you can indent your files as you please. Here is an example.</li>
+<code>import (file mode)</code> Use this option and specify a text file to import contents from that. You can import a plain text .txt file with todo items listed one per line, or you can import a .taskpaper file. Some limitations exist for the Taskpaper file import - no support for subprojects, notes, and project names cannot have spaces in them, and are mapped to a Todo tag.</li>
 <li>
 <code>import (from clipboard)</code> This option will allow you to import the contents of your clipboard, rather than from a file</li>
 <li>
 <code>features</code> keyword will allow you to switch on various features.</li>
-</ul><h4>Features</h4>
+</ul><h2>Features</h2>
 
 <p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/features.png" alt="Features" title="Features"></p>
 
-<p>Currently, there are three settings. <strong>Quick Create</strong> allows you to create new Todo items (when typing it in using the todo keyword) slightly faster. It prevents Alfred from disappearing and appearing when an item is added.</p>
+<p><strong>Quick Create</strong> allows you to create new Todo items (when typing it in using the todo keyword) slightly faster. It prevents Alfred from disappearing and appearing when an item is added.</p>
+
+<p><strong>Anchored Search</strong> allows you to filter Todo items more quickly. With this option enabled, if you have a task description like <code>This is a long description</code>, you can quickly narrow down to that item by typing <code>tiald</code></p>
 
 <p><strong>Smart Content</strong> - if you would like to add folders, URLs, to Todo, try adding them after Smart Content mode is switched on. It allows the following transformation</p>
 
@@ -141,6 +152,8 @@ The todo database file is a simple text based format, you can open it and view i
 <p>This allows you to do multiple things, you can now group your favourite links, folders or files by a tag name. Smart Content works best when you have a hot key enabled to add a new Todo item.</p>
 
 <p>Remember, smart content items are just simple todo items, so you can pin, tag, delete, mark as done etc as normal. Smart content only kicks in for all new items added, so existing items will remain untouched.</p>
+
+<p><strong>EggTimer2 in Edit mode</strong> when enabled will allow you to create alarms for todo items in Edit Mode. You must have the <a href="http://www.alfredforum.com/topic/275-eggtimer-v2-updated-to-20-final/">EggTimer2 workflow</a> installed.</p>
 
 <h2>Syntax Guide</h2>
 
@@ -199,12 +212,17 @@ The todo database file is a simple text based format, you can open it and view i
 <li><a href="http://www.alfredforum.com/user/2262-xtin/">xtin</a></li>
 </ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/BenziAhamed">BenziAhamed</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Todo maintained by <a href="https://github.com/BenziAhamed">BenziAhamed</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
