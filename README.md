@@ -53,17 +53,21 @@ Todo is made to work out of the box by default, but in case you need more contro
 	* Once you define a setup folder, all your existing todo database file will be moved over to the new location, and you can resume working with Todo. You can use the setup command multiple times.
 The todo database file is a simple text based format, you can open it and view it in your favourite text editor. (The format is YAML)
 * `reset` As the name suggests, resets your Todo workflow (clears all todo items, resets the location of your todo database file to the default location)
-* `export` Will allow you to export your todo list as plain text. If you have specific tags created, you can export them individually. At the moment, the export only copies items to the clipboard
-* `import (file mode)` Use this option and specify a text file to import contents from that. Format of the text file can be 1 todo item per line, or the format the export option uses. Import mechanism ignores whitespaces, so you can indent your files as you please. Here is an example.
+* `export` Will allow you to export your todo list as plain text. Two options are available:
+	* Export todo list to a .taskpaper file
+	* Export todo list in classic plain text/taskpaper format to clipboard 
+* `import (file mode)` Use this option and specify a text file to import contents from that. You can import a plain text .txt file with todo items listed one per line, or you can import a .taskpaper file. Some limitations exist for the Taskpaper file import - no support for subprojects, notes, and project names cannot have spaces in them, and are mapped to a Todo tag.
 * `import (from clipboard)` This option will allow you to import the contents of your clipboard, rather than from a file
 * `features` keyword will allow you to switch on various features.
 
 
-#### Features
+## Features
 
 ![Features][3]
 
-Currently, there are three settings. **Quick Create** allows you to create new Todo items (when typing it in using the todo keyword) slightly faster. It prevents Alfred from disappearing and appearing when an item is added.
+**Quick Create** allows you to create new Todo items (when typing it in using the todo keyword) slightly faster. It prevents Alfred from disappearing and appearing when an item is added.
+
+**Anchored Search** allows you to filter Todo items more quickly. With this option enabled, if you have a task description like `This is a long description`, you can quickly narrow down to that item by typing `tiald`
 
 **Smart Content** - if you would like to add folders, URLs, to Todo, try adding them after Smart Content mode is switched on. It allows the following transformation
 
@@ -76,6 +80,8 @@ Currently, there are three settings. **Quick Create** allows you to create new T
 This allows you to do multiple things, you can now group your favourite links, folders or files by a tag name. Smart Content works best when you have a hot key enabled to add a new Todo item.
  
 Remember, smart content items are just simple todo items, so you can pin, tag, delete, mark as done etc as normal. Smart content only kicks in for all new items added, so existing items will remain untouched.
+
+**EggTimer2 in Edit mode** when enabled will allow you to create alarms for todo items in Edit Mode. You must have the [EggTimer2 workflow](http://www.alfredforum.com/topic/275-eggtimer-v2-updated-to-20-final/) installed.
 
 
 ## Syntax Guide
