@@ -44,8 +44,22 @@ When adding items, add and todo keywords are interchangeable, although the key d
 * `Tab` key against a todo item, you will be shown all todo items with the matching tag
 * `Enter` will copy the text content of a todo item to the clipboard
 
+## Lists
 
-### Advanced Keywords
+![Todo lists][7]
+
+If you want more control over your todo items apart from tagging, pinning and setting due dates for them, you can split up your todo items with lists.
+
+By default, Todo uses a list called `todo`, but you can create new lists using the `list` keyword.
+
+* Typing `list` will display all available lists
+* Typing `list <name>` will select a list titled `name` if it exists or allow you to create a new list
+
+At any point in time only one list will be active, and all actions performed by using the `todo`,`add`,`import`,`export` etc keywords will be working against the currently active list.
+
+In list view, `Cmd` + `Enter` will help you to delete a list altogether.
+
+## Advanced Keywords
 
 Todo is made to work out of the box by default, but in case you need more control the following commands may help:
 
@@ -131,3 +145,4 @@ Lots of people have contributed with suggestions and feature ideas. In particula
 [4]: https://dl.dropbox.com/u/2377432/alfredv2/todo/no_smartcontent.png "Smart Content Disabled"
 [5]: https://dl.dropbox.com/u/2377432/alfredv2/todo/smartcontent.png "Smart Content Enabled"
 [6]: https://dl.dropbox.com/u/2377432/alfredv2/todo/todo_items.png "Todo items"
+[7]: https://dl.dropbox.com/u/2377432/alfredv2/todo/list.png "Todo lists"
