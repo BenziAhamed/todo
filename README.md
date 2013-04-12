@@ -16,10 +16,11 @@ Todo is a simple yet feature packed todo list manager for Alfred.
     * `todo` will display the list of tasks
     * `todo #` will display the list of tags
     * `todo @` will display all items with a due date
-    > **TIP** To see all items due for today, type `todo @today`
 * `add <new task>` will add a new task
 * `done` will show you all items that have been marked as done
 * `clear` to remove items
+
+> **TIP** To see all items due for today, type `todo @today`
 
 
 #### Adding new items
@@ -39,10 +40,28 @@ When adding items, add and todo keywords are interchangeable, although the key d
     * In edit mode, use the same syntax that you use to create a new todo - e.g. `#newtag new todo text`. Todo will identify which portion you need to change and update them accordingly
 * `Shift` will allow you to mark an item as done. You can view all done items with the done keyword
 * `Cmd` will help you delete either a todo item, and all items that match a specific tag
-* `Alt` will help you list out all items that match the currently selected items tag
 * `Ctrl` will help you pin/unpin a todo item. Pinned items will always be displayed first (they can be deleted as usual)
 * `Tab` key against a todo item, you will be shown all todo items with the matching tag
 * `Enter` will copy the text content of a todo item to the clipboard
+
+
+### Full keyword list
+
+* `add` (New item '{query}')
+* `clear` (Clear Todo items - done list)
+* `clear` (Clear Todo items - everything)
+* `clear` (Clear Todo items - todo list)
+* `done` (View completed Todo items)
+* `edit` (Edit Todo item)
+* `export` (Export all your items)
+* `features` (Enable or disable features in Todo)
+* `format` (Set default format for Todo lists)
+* `import` (Import Todo items - clipboard)
+* `list` (Manage Todo lists)
+* `reset` (Reset Todo)
+* `tags` (View Todo tags)
+* `todo` (Manage a todo list using Alfred)
+
 
 ## Lists
 
@@ -59,6 +78,18 @@ At any point in time only one list will be active, and all actions performed by 
 
 In list view, `Cmd` + `Enter` will help you to delete a list altogether.
 
+## Format
+
+You can set the default format of new todo lists using the format command. 
+
+Type `format` to view and select a specific option.
+
+* **Classic YAML** is the format Todo started with. Its a plain text format, but not very readable.
+* **Taskpaper** format is inspired by the plain text format used by the [Taskpaper app](http://www.hogbaysoftware.com/products/taskpaper). The nice thing about this format is that the underlying todo list file is readable and editable. And if you use Taskpaper, you can work on these lists from there too.
+
+When you set the default format, all new todo lists created using the `list` command will use that format.
+
+
 ## Advanced Keywords
 
 Todo is made to work out of the box by default, but in case you need more control the following commands may help:
@@ -67,12 +98,11 @@ Todo is made to work out of the box by default, but in case you need more contro
 	* Once you define a setup folder, all your existing todo database file will be moved over to the new location, and you can resume working with Todo. You can use the setup command multiple times.
 The todo database file is a simple text based format, you can open it and view it in your favourite text editor. (The format is YAML)
 * `reset` As the name suggests, resets your Todo workflow (clears all todo items, resets the location of your todo database file to the default location)
-* `export` Will allow you to export your todo list as plain text. Two options are available:
-	* Export todo list to a .taskpaper file
-	* Export todo list in classic plain text/taskpaper format to clipboard 
+* `export` Will allow you to export your todo list as plain text, or specific tags if you use multiple tags
 * `import (file mode)` Use this option and specify a text file to import contents from that. You can import a plain text .txt file with todo items listed one per line, or you can import a .taskpaper file. Some limitations exist for the Taskpaper file import - no support for subprojects, notes, and project names cannot have spaces in them, and are mapped to a Todo tag.
 * `import (from clipboard)` This option will allow you to import the contents of your clipboard, rather than from a file
 * `features` keyword will allow you to switch on various features.
+* `format` will allow you to set the default format of new todo lists.
 
 
 ## Features
