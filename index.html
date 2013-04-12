@@ -22,7 +22,8 @@
           <h2 id="project_tagline">Todo is a simple yet powerful Alfred workflow, made for todo list management.</h2>
 
             <section id="downloads">
-              <a href="https://dl.dropbox.com/u/2377432/alfredv2/todo/Todo.alfredworkflow">Download Alfred Workflow</a>
+              <a class="zip_download_link" href="https://github.com/BenziAhamed/todo/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/BenziAhamed/todo/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -56,9 +57,7 @@
 <li>
 <code>todo #</code> will display the list of tags</li>
 <li>
-<code>todo @</code> will display all items with a due date
-&gt; <strong>TIP</strong> To see all items due for today, type <code>todo @today</code>
-</li>
+<code>todo @</code> will display all items with a due date</li>
 </ul>
 </li>
 <li>
@@ -67,7 +66,11 @@
 <code>done</code> will show you all items that have been marked as done</li>
 <li>
 <code>clear</code> to remove items</li>
-</ul><h4>Adding new items</h4>
+</ul><blockquote>
+<p><strong>TIP</strong> To see all items due for today, type <code>todo @today</code></p>
+</blockquote>
+
+<h4>Adding new items</h4>
 
 <ul>
 <li>Typing <code>add a new task</code> will create a new task titled <strong>a new task</strong>. This will be tagged <strong>#default</strong>
@@ -96,13 +99,42 @@
 <li>
 <code>Cmd</code> will help you delete either a todo item, and all items that match a specific tag</li>
 <li>
-<code>Alt</code> will help you list out all items that match the currently selected items tag</li>
-<li>
 <code>Ctrl</code> will help you pin/unpin a todo item. Pinned items will always be displayed first (they can be deleted as usual)</li>
 <li>
 <code>Tab</code> key against a todo item, you will be shown all todo items with the matching tag</li>
 <li>
 <code>Enter</code> will copy the text content of a todo item to the clipboard</li>
+</ul><h3>Full keyword list</h3>
+
+<ul>
+<li>
+<code>add</code> (New item '{query}')</li>
+<li>
+<code>clear</code> (Clear Todo items - done list)</li>
+<li>
+<code>clear</code> (Clear Todo items - everything)</li>
+<li>
+<code>clear</code> (Clear Todo items - todo list)</li>
+<li>
+<code>done</code> (View completed Todo items)</li>
+<li>
+<code>edit</code> (Edit Todo item)</li>
+<li>
+<code>export</code> (Export all your items)</li>
+<li>
+<code>features</code> (Enable or disable features in Todo)</li>
+<li>
+<code>format</code> (Set default format for Todo lists)</li>
+<li>
+<code>import</code> (Import Todo items - clipboard)</li>
+<li>
+<code>list</code> (Manage Todo lists)</li>
+<li>
+<code>reset</code> (Reset Todo)</li>
+<li>
+<code>tags</code> (View Todo tags)</li>
+<li>
+<code>todo</code> (Manage a todo list using Alfred)</li>
 </ul><h2>Lists</h2>
 
 <p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/list.png" alt="Todo lists" title="Todo lists"></p>
@@ -117,6 +149,19 @@
 </ul><p>At any point in time only one list will be active, and all actions performed by using the <code>todo</code>,<code>add</code>,<code>import</code>,<code>export</code> etc keywords will be working against the currently active list.</p>
 
 <p>In list view, <code>Cmd</code> + <code>Enter</code> will help you to delete a list altogether.</p>
+
+<h2>Format</h2>
+
+<p>You can set the default format of new todo lists using the format command. </p>
+
+<p>Type <code>format</code> to view and select a specific option.</p>
+
+<ul>
+<li>
+<strong>Classic YAML</strong> is the format Todo started with. Its a plain text format, but not very readable.</li>
+<li>
+<strong>Taskpaper</strong> format is inspired by the plain text format used by the <a href="http://www.hogbaysoftware.com/products/taskpaper">Taskpaper app</a>. The nice thing about this format is that the underlying todo list file is readable and editable. And if you use Taskpaper, you can work on these lists from there too.</li>
+</ul><p>When you set the default format, all new todo lists created using the <code>list</code> command will use that format.</p>
 
 <h2>Advanced Keywords</h2>
 
@@ -134,19 +179,15 @@ The todo database file is a simple text based format, you can open it and view i
 <li>
 <code>reset</code> As the name suggests, resets your Todo workflow (clears all todo items, resets the location of your todo database file to the default location)</li>
 <li>
-<code>export</code> Will allow you to export your todo list as plain text. Two options are available:
-
-<ul>
-<li>Export todo list to a .taskpaper file</li>
-<li>Export todo list in classic plain text/taskpaper format to clipboard </li>
-</ul>
-</li>
+<code>export</code> Will allow you to export your todo list as plain text, or specific tags if you use multiple tags</li>
 <li>
 <code>import (file mode)</code> Use this option and specify a text file to import contents from that. You can import a plain text .txt file with todo items listed one per line, or you can import a .taskpaper file. Some limitations exist for the Taskpaper file import - no support for subprojects, notes, and project names cannot have spaces in them, and are mapped to a Todo tag.</li>
 <li>
 <code>import (from clipboard)</code> This option will allow you to import the contents of your clipboard, rather than from a file</li>
 <li>
 <code>features</code> keyword will allow you to switch on various features.</li>
+<li>
+<code>format</code> will allow you to set the default format of new todo lists.</li>
 </ul><h2>Features</h2>
 
 <p><img src="https://dl.dropbox.com/u/2377432/alfredv2/todo/features.png" alt="Features" title="Features"></p>
