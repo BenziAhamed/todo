@@ -1,0 +1,106 @@
+### Version History
+
+22 Mar 2013 - v0.1
+* Initial version
+
+23 Mar 2013 - v0.1.1
+* Small bug fixes around escaping certain characters
+
+23 Mar 2013 - v0.2
+* Added tagging support
+
+23 Mar 2013 - v0.5
+* Improved handling of todo items once selected (items details are copied to clipboard)
+* Improved handling of tags (you can now delete all items with a specific tag at once by pressing the Cmd key in tag view, selecting a tag will display all the items with that tag)
+* New advanced features and config options (control where the todo database is stored, reset to factory settings)
+
+24 Mar 2013 - v0.6
+* Added a utility keyword tags which will take you directly to the tags list view
+* Added the Alt modifier, that helps you search for items matching a specific tag
+
+26 Mar 2013 - v0.7
+* Add ability to pin / unpin items using the Ctrl key
+* QuickCreate feature for items added without specifying a tag and using the Todo keyword - prevents Alfred from flashing
+* Export todo items to clipboard (plain text)
+
+27 Mar 2013 - v0.8
+* Sneaky bug fix for issue when saving items with just 2 letters
+* Import todo items from a plain text file
+* Pinning support added to todo free-entry. If you include a !! (double exclamation) anywhere in your todo description, a pinned item will be created
+* Pressing tab on a todo item will quickly take you to tag view of the item's tag
+* Somewhat better unicode character support
+
+28 Mar 2013 - v0.9
+* Mark items as 'done' using the Shift key - and use the done keyword to see all such items
+* Now you can clear your todo list, done items or everything separately
+* Import items from your clipboard using import keyword
+* Import selection as todo item via a hotkey
+* Setup command now informs you if you are trying to set the same todo db folder twice
+* Minor performance improvements when adding and importing items
+* Better handling of file contents when importing data
+
+31 Mar 2013 - v1.0
+* Editing items now possible - use the 'fn' key modifier, select an item or tag to change its details. For items you can set new tags and text, for tags you can update the tag name. Works for both todo and done lists.
+
+31 Mar 2013 - v1.1
+* Features - enable/disable features in Todo
+	- Quick Create allows you to create new todo items using the todo keyword fast
+	- Smart Content - action items based on context, if a todo item is a URL load the page, if its a file or directory open that
+	- Smart Content - Page Titles, if enabled, in Smart Content mode, URL items will have their page titles retrieved and stored as metadata information
+* Pressing tab on items allows you to do a quick filter - press tab onces, and the tag name autocompletes, press tab again and the task text autocompletes
+* Cleaned up various UI texts
+
+3 April 2013 - v1.2
+* Added Alleyoop support
+* Added File Action to add files/folder to Todo
+* Tag view mode now supports search and filtering
+* Slightly improved performance during import
+
+4 April 2013 - v1.3
+* Added due dates for items. Use @<date> to add/edit a due date.
+
+4 April 2013 - v1.4
+* Filter view using 'todo @<date>', e.g. 'todo @today'
+
+5 April 2013 - v1.5
+* Experimental integration with EggTimer2 Alarms
+* Tag view is now sorted by tag name
+* Export now includes due date settings, and is sorted by tag name
+* Done view can now be filtered by due date as well
+* Better logic to disable scanning the entire todo list when adding an item
+* More code comments
+
+8 April 2013 - v1.6
+* Enhanced due date recognition
+* New feature - anchored todo item search based on beginning letters in words
+* Support for importing and exporting todo's in Taskpaper format
+
+9 April 2013 - v1.7
+* Temporary export to Taskpaper
+
+12 April - v1.8
+* Added format keyword to choose default format for todo files
+* Cleaned up the export interface a bit
+
+17 April - v1.9
+* Added export as CSV option
+
+23 April - v2.0
+* Added new format JSON
+
+24 April - v2.1
+* Minor bug fix when creating a new JSON todo file
+
+26 April - v2.2
+* Beta - Remember the Milk integration
+
+
+
+
+
+
+
+
+
+
+
