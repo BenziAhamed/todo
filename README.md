@@ -1,3 +1,10 @@
+# IMPORTANT
+
+> NOTE: This workflow is no longer maintained.
+> I have a newer (activity tracking) workflow called [Streaks](https://github.com/BenziAhamed/Streaks)
+
+
+
 # Todo
 
 ![Todo intro][1]
